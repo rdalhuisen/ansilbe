@@ -1,5 +1,6 @@
 ---
 - name: Install all critical and security updates
+hosts: all
   win_updates:
     category_names:
     - CriticalUpdates
