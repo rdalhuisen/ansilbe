@@ -1,3 +1,4 @@
   – name: Check for missing updates
+  hosts: all
         win_updates: state=searched
         register: update_count
