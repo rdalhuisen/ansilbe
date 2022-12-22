@@ -1,0 +1,9 @@
+---
+- hosts: all
+  tasks:
+  # Check for missing updates
+  win_updates:
+    category_names:
+      - SecurityUpdates
+      - CriticalUpdates
+      - UpdateRollups
