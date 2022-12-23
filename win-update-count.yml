@@ -1,4 +1,10 @@
+---
 # Check for missing updates
-  – name: Check for missing updates
-          win_updates: state=searched
-          register: update_count
+- hosts: all
+  tasks:
+  - name: windows_update
+    win_updates:
+      category_names:
+        - SecurityUpdates
+        - CriticalUpdates
+        - UpdateRollups
